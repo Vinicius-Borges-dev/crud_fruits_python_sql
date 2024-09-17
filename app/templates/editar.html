@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/atualizar?id={{fruta.id}}" method="post">
+        <label for="nome">Nome: </label><br>
+        <input type="text" name="nome" id="nome" value="{{fruta.nome}}"><br>
+        <label for="preco">preco: </label><br>
+        <input type="text" name="preco" id="preco" value="{{fruta.preco}}"><br>
+        <label for="dataColheita">Data da Colheita: </label><br>
+        <input type="date" name="dataColheita" id="dataColheita" value="{{fruta.dataColheita}}"><br>
+        <label for="dataVencimento">Data de Vencimento: </label><br>
+        <input type="date" name="dataVencimento" id="dataVencimento" value="{{fruta.dataVencimento}}"><br>
+        <label for="descricao">Descrição: </label><br>
+        <textarea name="descricao" id="descricao" cols="30">{{fruta.descricao}}</textarea><br>
+        <input type="submit" value="Atualizar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <table border=1>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th colspan="2">Ações</th>
+                </tr>
+                <tbody>
+                    {% for fruta in frutas %}
+                        <tr>
+                            <td>{{fruta.nome}}</td>
+                            <td>{{fruta.preco}}</td>
+                            <td><a href="/editar/{{fruta.id}}">Editar</a></td>
+                            <td><a href="/deletar/{{fruta.id}}">Deletar</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </thead>
+        </table>
+    </body>
+</html>
